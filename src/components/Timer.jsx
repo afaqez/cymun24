@@ -13,12 +13,12 @@ export const Timer = () => {
     return () => {
       clearInterval(updateCountdown);
     };
-  }, [countdown]);
+  }, []);
 
   return (
-    <div className="flex gap-8 uppercase font-red-hat mt-32 laptop:mt-20 tablet:scale-75 mobile:scale-100 mobile:gap-4 mobile:mt-20">
+    <div className="flex flex-wrap justify-center gap-6 uppercase font-montserrat mt-8 md:mt-12 lg:mt-20">
       {countdown.length === 0 ? (
-        <p className="font-red-hat text-4xl text-white duration-300	ease-in">
+        <p className="font-montserrat text-2xl md:text-3xl lg:text-4xl text-white duration-300 ease-in animate-fade-in">
           That is all folks!
         </p>
       ) : (
@@ -26,15 +26,13 @@ export const Timer = () => {
           const timerID = ["days", "hours", "minutes", "seconds"];
 
           return (
-            <div key={index}>
-              {/* // flip-card */}
-              <div className="text-soft-red inline-flex flex-col text-7.5xl w-40 h-40 items-center justify-center card-shadow relative leading-loose mobile:w-16 mobile:text-3xl mobile:h-16 mobile:leading-[4rem]">
-                {/* top */}
-                <div className="backdrop-blur-md h-1/2 w-full flex justify-center overflow-hidden rounded-t-lg">
-                  <p className="">{count < 10 ? `0${count}` : count}</p>
+            <div key={index} className="animate-slide-up">
+              <div className="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-lg shadow-md inline-flex flex-col text-4xl md:text-5xl lg:text-7xl w-28 h-28 md:w-36 md:h-36 lg:w-44 lg:h-44 items-center justify-center relative">
+                <div className="h-1/2 w-full flex justify-center overflow-hidden">
+                  <p className="animate-count font-bold text-white">{count < 10 ? `0${count}` : count}</p>
                 </div>
 
-                <p className="font-semibold text-xl font-montserrat text-grayish text-center mt-9 tracking-widest border-teal-200 mobile:text-[0.5rem] mobile:mt-2">
+                <p className="font-medium text-sm md:text-base lg:text-lg text-white text-center mt-4 md:mt-6 lg:mt-8 tracking-wider">
                   {timerID[index]}
                 </p>
               </div>
