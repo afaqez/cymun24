@@ -7,3 +7,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.glow {
+    font-size: 80px;
+    color: #112269;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #4a5eff, 0 0 40px #4a5eff, 0 0 50px #4a5eff, 0 0 60px #4a5eff, 0 0 70px #4a5eff;
+    }
+
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #112269, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+   

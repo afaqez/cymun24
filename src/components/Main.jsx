@@ -12,8 +12,8 @@ const Main = () => {
       <Navbar />
 
       <div className="flex-grow flex flex-col justify-center items-center text-center px-4 py-10 md:py-20">
-        <div className="mb-4 animate-fade-in">
-          <h2 className="text-[#112269] font-sedgwick text-5xl md:text-xl lg:text-2xl">
+        <div className="glow mb-4 animate-fade-in">
+          <h2 className="text-[#ffffff] font-sedgwick text-5xl md:text-xl lg:text-2xl">
             CY'MUN24
           </h2>
         </div>
