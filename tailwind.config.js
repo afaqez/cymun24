@@ -3,10 +3,12 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {
-      fontFamily: {
-        montserrat: ["Montserrat", "sans-serif"],
-      },
+    extend: {},
+    fontFamily: {
+      montserrat: ["Montserrat", "sans-serif"],
+      jersey: ["Jersey 15"],
+      sedgwick: ["Sedgwick Ave Display"],
+      trocchi: ["Trocchi"],
     },
     colors: {
       primary: {
