@@ -33,7 +33,8 @@ const Main = () => {
       </div>
 
       <div className="font-bold text-center py-4 text-sm">
-        &copy; {new Date().getFullYear()} CYMUN. All rights reserved.
+        &copy; {new Date().getFullYear()} CYMUN. All rights reserved. Powered by
+        Kodevs.
       </div>
     </div>
   );
