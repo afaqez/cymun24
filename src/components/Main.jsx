@@ -14,7 +14,9 @@ const Main = () => {
       <div className="bg-cover bg-center min-h-screen flex flex-col justify-between">
         <Navbar />
 
-        <div className="flex-grow flex flex-col justify-center items-center text-center px-4 py-10 md:py-16"> {/* Adjusted padding */}
+        <div className="flex-grow flex flex-col justify-center items-center text-center px-4 py-10 md:py-16">
+          {" "}
+          {/* Adjusted padding */}
           {/* <div className="glow mb-4 animate-fade-in">
             <h2 className="text-[#ffffff] font-spartan text-5xl md:text-xl lg:text-2xl">
               CY'MUN'<span className="text-[#fe0a0a]">24</span>
@@ -29,7 +31,7 @@ const Main = () => {
             <Timer />
           </div>
           <div className="mt-20">
-            <button className="mt-20 text-xl font-montserrat bg-[#fe0a0a] text-white px-6 py-3 rounded-full hover:bg-[#437fa8] transition-colors duration-300 animate-bounce">
+            <button className="mt-20 text-xl font-montserrat bg-[#fe0a0a] text-white px-6 py-3 rounded-full hover:bg-[#d00909] transition-colors duration-300 animate-bounce">
               Register Now
             </button>
           </div>
@@ -40,13 +42,16 @@ const Main = () => {
       <div className="bg-cover bg-center min-h-screen flex flex-col justify-between">
         <div className="flex-grow flex flex-col justify-center items-center text-center px-4 py-10 md:py-20">
           <Stats />
-          <ExecutiveCouncil />
+          {/* <ExecutiveCouncil /> */}
         </div>
       </div>
 
       {/* Footer Section */}
-      <div className="bg-black text-white text-center py-4 text-xs"> {/* Changed text size to text-xs */}
-        &copy; {new Date().getFullYear()} CYMUN. All rights reserved. Powered by Kodevs.
+      <div className="bg-black text-white text-center py-4 text-xs">
+        {" "}
+        {/* Changed text size to text-xs */}
+        &copy; {new Date().getFullYear()} CYMUN. All rights reserved. Powered by
+        Kodevs.
       </div>
     </div>
   );

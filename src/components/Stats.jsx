@@ -27,7 +27,10 @@ const Stats = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" ref={ref}>
+      <div
+        className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+        ref={ref}
+      >
         <motion.div
           className="bg-white bg-opacity-25 rounded-lg p-6 flex flex-col justify-between items-center transform transition-all duration-300"
           variants={cardVariants}
@@ -39,7 +42,7 @@ const Stats = () => {
             <CommitteeSessionIcon className="h-24 w-24" />
           </div>
           <div className="text-center">
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-sm font-semibold text-white mb-2">
               Committee Sessions
             </h3>
             <p className="text-2xl text-white">10</p>
@@ -57,7 +60,7 @@ const Stats = () => {
             <UNcommittees className="h-24 w-24" />
           </div>
           <div className="text-center">
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-sm font-semibold text-white mb-2">
               UN Committees
             </h3>
             <p className="text-2xl text-white">8</p>
@@ -75,7 +78,7 @@ const Stats = () => {
             <Delegates className="h-24 w-24" />
           </div>
           <div className="text-center">
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-sm font-semibold text-white mb-2">
               Delegates and Team Members
             </h3>
             <p className="text-2xl text-white">300+</p>
@@ -93,7 +96,7 @@ const Stats = () => {
             <SocialEvents className="h-24 w-24" />
           </div>
           <div className="text-center">
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-sm font-semibold text-white mb-2">
               Social Events
             </h3>
             <p className="text-2xl text-white">3</p>
