@@ -6,6 +6,7 @@ import { Timer } from "./Timer";
 import ExecutiveCouncil from "./ExecutiveCouncil";
 import Stats from "./Stats"; // Import the StatsComponent
 import TeamSection from "./TeamSection";
+
 const Main = () => {
   return (
     <div>
@@ -13,24 +14,19 @@ const Main = () => {
       <div className="bg-cover bg-center min-h-screen flex flex-col justify-between">
         <Navbar />
 
-        <div className="flex-grow flex flex-col justify-center items-center text-center px-4 py-10 md:py-20">
+        <div className="flex-grow flex flex-col justify-center items-center text-center px-4 py-10 md:py-16"> {/* Adjusted padding */}
           {/* <div className="glow mb-4 animate-fade-in">
             <h2 className="text-[#ffffff] font-spartan text-5xl md:text-xl lg:text-2xl">
               CY'MUN'<span className="text-[#fe0a0a]">24</span>
             </h2>
           </div> */}
-          <div className=" animate-slide-up">
+          <div className="animate-slide-up">
             <h1 className="font-spartan text-3xl md:text-3xl lg:text-5xl font-bold text-[#ffffff]">
               Capital University Islamabad's Official MUN is finally here!
             </h1>
           </div>
           <div className="mb-8">
             <Timer />
-          </div>
-          <div>
-            <button className="text-xl font-montserrat bg-[#fe0a0a] text-white px-6 py-3 rounded-full hover:bg-[#437fa8] transition-colors duration-300 animate-bounce">
-              Register Now
-            </button>
           </div>
         </div>
       </div>
@@ -41,11 +37,16 @@ const Main = () => {
           <Stats />
           <ExecutiveCouncil />
         </div>
+      </div>
 
-        <div className="font-bold text-center py-4 text-sm">
-          &copy; {new Date().getFullYear()} CYMUN. All rights reserved. Powered
-          by Kodevs.
+      {/* Footer Section */}
+      <div className="bg-black text-white text-center py-4 text-xs"> {/* Changed text size to text-xs */}
+        <div className="mb-2">
+          <button className="text-xl font-montserrat bg-[#fe0a0a] text-white px-6 py-3 rounded-full hover:bg-[#437fa8] transition-colors duration-300 animate-bounce">
+            Register Now
+          </button>
         </div>
+        &copy; {new Date().getFullYear()} CYMUN. All rights reserved. Powered by Kodevs.
       </div>
     </div>
   );
