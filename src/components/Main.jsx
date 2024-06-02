@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 import { Timer } from "./Timer";
 import ExecutiveCouncil from "./ExecutiveCouncil";
 import Stats from "./Stats"; // Import the StatsComponent
-import TeamSection from "./TeamSection";
+import PresidentsMessage from "./PresidentsMessage";
 
 const Main = () => {
   return (
@@ -44,6 +44,10 @@ const Main = () => {
           <Stats />
           {/* <ExecutiveCouncil /> */}
         </div>
+      </div>
+
+      <div className="bg-gray-100 py-20">
+        <PresidentsMessage />
       </div>
 
       {/* Footer Section */}
