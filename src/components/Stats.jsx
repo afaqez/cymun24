@@ -6,8 +6,8 @@ import { ReactComponent as SocialEvents } from "../assets/icons/socialEvents.svg
 
 const Stats = () => {
   return (
-    <div className="bg-gray-100 rounded-lg p-6 shadow-lg">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="bg-gray-100 rounded-lg p-2 shadow-lg">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div className="bg-white rounded-lg p-4 flex flex-col justify-between">
           <div className="flex justify-center">
             <CommitteeSessionIcon />
@@ -16,7 +16,7 @@ const Stats = () => {
             <h3 className="text-sm font-semibold text-gray-800">
               Committee Sessions
             </h3>
-            <p className="text-lg text-gray-600">Total sessions: 10</p>
+            <p className="text-lg text-gray-600">10</p>
           </div>
         </div>
         <div className="bg-white rounded-lg p-4 flex flex-col justify-between">
@@ -27,7 +27,7 @@ const Stats = () => {
             <h3 className="text-sm font-semibold text-gray-800">
               UN Committees
             </h3>
-            <p className="text-lg text-gray-600">Total committees: 8</p>
+            <p className="text-lg text-gray-600">8</p>
           </div>
         </div>
 
@@ -39,7 +39,7 @@ const Stats = () => {
             <h3 className="text-sm font-semibold text-gray-800">
               Delegates and Team Members
             </h3>
-            <p className="text-lg text-gray-600">Total members: 300+</p>
+            <p className="text-lg text-gray-600">300+</p>
           </div>
         </div>
         <div className=" bg-white rounded-lg p-4 flex flex-col justify-between ">
@@ -50,7 +50,7 @@ const Stats = () => {
             <h3 className="text-sm font-semibold text-gray-800">
               Social Events
             </h3>
-            <p className="text-lg text-gray-600">Total events: 3</p>
+            <p className="text-lg text-gray-600">3</p>
           </div>
         </div>
       </div>

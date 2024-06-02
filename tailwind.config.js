@@ -9,6 +9,7 @@ module.exports = {
       jersey: ["Jersey 15"],
       sedgwick: ["Sedgwick Ave Display"],
       trocchi: ["Trocchi"],
+      spartan: ["League Spartan"],
     },
     colors: {
       primary: {

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import logo from "../assets/images/cymun-logo.png";
 import MenuIcon from "../assets/icons/MenuIcon";
 
 const Navbar = () => {
@@ -12,7 +11,11 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between items-center w-[92%] mx-auto py-4">
       <div className="flex items-center justify-center md:justify-start w-full md:w-auto">
-        <img src={logo} alt="Logo" className="w-36 mx-auto md:mx-0" />
+        <div className="glow mb-4 animate-fade-in">
+          <h2 className="text-[#ffffff] font-spartan text-5xl md:text-xl lg:text-2xl">
+            CY'MUN'<span className="text-[#fe0a0a]">24</span>
+          </h2>
+        </div>
       </div>
 
       <div

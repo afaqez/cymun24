@@ -29,7 +29,9 @@ export const Timer = () => {
             <div key={index} className="animate-slide-up">
               <div className="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-lg shadow-md inline-flex flex-col text-4xl md:text-5xl lg:text-7xl w-28 h-28 md:w-36 md:h-36 lg:w-44 lg:h-44 items-center justify-center relative">
                 <div className="h-1/2 w-full flex justify-center overflow-hidden">
-                  <p className="animate-count font-bold text-white">{count < 10 ? `0${count}` : count}</p>
+                  <p className="animate-count font-bold text-white">
+                    {count < 10 ? `0${count}` : count}
+                  </p>
                 </div>
 
                 <p className="font-medium text-sm md:text-base lg:text-lg text-white text-center mt-4 md:mt-6 lg:mt-8 tracking-wider">
