@@ -28,6 +28,11 @@ const Main = () => {
           <div className="mb-8">
             <Timer />
           </div>
+          <div className="mt-20">
+            <button className="mt-20 text-xl font-montserrat bg-[#fe0a0a] text-white px-6 py-3 rounded-full hover:bg-[#437fa8] transition-colors duration-300 animate-bounce">
+              Register Now
+            </button>
+          </div>
         </div>
       </div>
 
@@ -41,11 +46,6 @@ const Main = () => {
 
       {/* Footer Section */}
       <div className="bg-black text-white text-center py-4 text-xs"> {/* Changed text size to text-xs */}
-        <div className="mb-2">
-          <button className="text-xl font-montserrat bg-[#fe0a0a] text-white px-6 py-3 rounded-full hover:bg-[#437fa8] transition-colors duration-300 animate-bounce">
-            Register Now
-          </button>
-        </div>
         &copy; {new Date().getFullYear()} CYMUN. All rights reserved. Powered by Kodevs.
       </div>
     </div>
