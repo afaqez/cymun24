@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Timer from "./components/Timer";
 import HeroSection from "./components/HeroSection";
 import RegisterButton from "./components/RegisterButton";
+import Stats from "./components/Stats";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <HeroSection />
         <Timer />
         <RegisterButton />
+        <Stats />
       </Container>
     </Box>
   );
