@@ -1,10 +1,11 @@
 // src/App.js
 import React from "react";
-import { Container, Box } from "@mui/material";
+import { Container, Box, Button } from "@mui/material";
 import background from "./assets/images/background.png";
 import Navbar from "./components/Navbar";
 import Timer from "./components/Timer";
 import HeroSection from "./components/HeroSection";
+import RegisterButton from "./components/RegisterButton";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Navbar />
         <HeroSection />
         <Timer />
+        <RegisterButton />
       </Container>
     </Box>
   );
