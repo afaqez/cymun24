@@ -1,34 +1,26 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
-import Home from "./components/Home";
-import backgroundImage from "./assets/images/cloudyBackground.png";
+// src/App.js
+import React from 'react';
+import { Container, Box } from '@mui/material';
+import background from './assets/images/background.png';
+import Navbar from './components/Navbar';
+import Timer from './components/Timer';
 
-const App = () => {
-  const [scrollY, setScrollY] = useState(0);
-
-  const handleScroll = () => {
-    setScrollY(window.scrollY);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
+function App() {
   return (
-    <div className="bg-container">
-      <div
-        className={`bg-layer ${scrollY > 300 ? "red" : "black"}`}
-        style={{ backgroundImage: `url(${backgroundImage})` }}
-      />
-      <div className="relative z-10">
-        <Home />
-      </div>
-    </div>
+    <Box
+      sx={{
+        backgroundImage: `url(${background})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        minHeight: '100vh',
+      }}
+    >
+      <Container maxWidth="lg">
+        <Navbar/>
+        <Timer/>
+      </Container>
+    </Box>
   );
-};
+}
 
 export default App;
