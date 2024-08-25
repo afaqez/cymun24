@@ -6,46 +6,47 @@ const Navbar = () => {
     <Box
       component="nav"
       sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '92%',
-        marginX: 'auto',
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "92%",
+        marginX: "auto",
         py: 4,
       }}
     >
       <Box
         sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          width: '100%',
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
         }}
       >
         <Box
           sx={{
             mb: 4,
-            animation: 'fade-in 1s ease-in-out',
+            color: "#112269",
+            textAlign: "center",
+            animation: "glow 2s ease-in-out infinite alternate",
           }}
-          className="glow"
         >
           <Typography
             variant="h2"
             sx={{
-              fontFamily: 'Spartan, sans-serif',
+              fontFamily: "Spartan, sans-serif",
               fontSize: {
-                xs: '2.5rem', // text-5xl
-                md: '3.75rem', // text-6xl
-                lg: '5rem', // text-8xl
+                xs: "2.5rem", // text-5xl
+                md: "3.75rem", // text-6xl
+                lg: "5rem", // text-8xl
               },
-              color: '#ffffff',
+              color: "#ffffff",
             }}
           >
             CY'MUN'
             <Box
               component="span"
               sx={{
-                color: '#fe0a0a',
+                color: "#fe0a0a",
               }}
             >
               24
