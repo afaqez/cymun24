@@ -7,6 +7,8 @@ import Timer from "./components/Timer";
 import HeroSection from "./components/HeroSection";
 import RegisterButton from "./components/RegisterButton";
 import Stats from "./components/Stats";
+import PresidentsMessage from "./components/PresidentMessage";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
         <Timer />
         <RegisterButton />
         <Stats />
+        <PresidentsMessage />
+        <Footer />
       </Container>
     </Box>
   );
