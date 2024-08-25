@@ -5,12 +5,12 @@ const Footer = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "black",
         color: "white",
         textAlign: "center",
         py: 2,
         bottom: 0,
         width: "100%",
+        overflowX: "hidden",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

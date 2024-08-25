@@ -1,6 +1,5 @@
-// src/App.js
 import React from "react";
-import { Container, Box, Button } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import background from "./assets/images/background.png";
 import Navbar from "./components/Navbar";
 import Timer from "./components/Timer";
@@ -14,12 +13,15 @@ function App() {
   return (
     <Box
       sx={{
-        backgroundImage: `url(${background})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        position: "relative",
         minHeight: "100vh",
         width: "100vw",
         overflow: "hidden", // Prevents scrollbars from appearing if background image is larger
+        backgroundImage: `url(${background})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed", // Ensures the background image is fixed
+        backgroundRepeat: "no-repeat", // Prevents background from repeating
       }}
     >
       <Container maxWidth="lg" disableGutters>
