@@ -1,20 +1,22 @@
-let currentDayTime = new Date().getTime();
-const endDay = new Date();
-endDay.setDate(endDay.getDate() + 9);
+let currentTime = new Date().getTime();
+let endTime = localStorage.getItem("endTime");
+
+if (!endTime) {
+  endTime = new Date(currentTime + 5 * 60 * 1000).getTime(); // Set for 5 minutes
+  localStorage.setItem("endTime", endTime);
+}
 
 export const timeCalculation = () => {
-  const totalRemaining = endDay.getTime() - currentDayTime;
+  const totalRemaining = endTime - currentTime;
 
-  currentDayTime += 1000;
+  currentTime += 1000;
 
   if (totalRemaining <= 0) {
     return false;
   }
 
-  const days = Math.floor(totalRemaining / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((totalRemaining / (1000 * 60 * 60)) % 24);
   const minutes = Math.floor((totalRemaining / (1000 * 60)) % 60);
   const seconds = Math.floor((totalRemaining / 1000) % 60);
 
-  return [days, hours, minutes, seconds];
+  return [minutes, seconds];
 };

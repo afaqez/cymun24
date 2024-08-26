@@ -1,14 +1,39 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Typography, Grid } from "@mui/material";
-import { timeCalculation } from "../utils/timeCalculation";
+
+// Utility function for time calculation
+const timeCalculation = () => {
+  const countdownDuration = 5 * 60 * 1000; // 5 minutes in milliseconds
+  const startTime = new Date("2024-08-26T20:49:00Z"); // August 27th, 2:00 AM PKT in UTC
+  const currentTime = new Date();
+  const elapsedTime = currentTime - startTime;
+  const remainingTime = Math.max(countdownDuration - elapsedTime, 0);
+
+  if (remainingTime <= 0) return false; // Return false when countdown ends
+
+  const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+  return [days, hours, minutes, seconds];
+};
 
 const Timer = () => {
   const [countdown, setCountdown] = useState(() => timeCalculation() || []);
+  const [timerEnded, setTimerEnded] = useState(false); // State to track if timer has ended
 
   useEffect(() => {
     const updateCountdown = setInterval(() => {
-      const newCountdown = timeCalculation() || [];
-      setCountdown(newCountdown);
+      const newCountdown = timeCalculation();
+      if (newCountdown === false) {
+        setTimerEnded(true); // Set timerEnded to true when countdown reaches zero
+        clearInterval(updateCountdown); // Stop the interval
+      } else {
+        setCountdown(newCountdown);
+      }
     }, 1000);
 
     return () => {
@@ -28,7 +53,17 @@ const Timer = () => {
         fontFamily: "Montserrat, sans-serif",
       }}
     >
-      {countdown.length === 0 ? (
+      {timerEnded ? (
+        <Typography
+          variant="h4"
+          sx={{
+            color: "white",
+            animation: "fade-in 1s ease-in",
+          }}
+        >
+          Registrations Open!
+        </Typography>
+      ) : countdown.length === 0 ? (
         <Typography
           variant="h4"
           sx={{
