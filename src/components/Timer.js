@@ -3,8 +3,8 @@ import { Box, Typography, Grid } from "@mui/material";
 
 // Utility function for time calculation
 const timeCalculation = () => {
-  const countdownDuration = 5 * 60 * 1000; // 5 minutes in milliseconds
-  const startTime = new Date("2024-08-26T20:49:00Z"); // August 27th, 2:00 AM PKT in UTC
+  const countdownDuration = 10 * 60 * 1000; // 5 minutes in milliseconds
+  const startTime = new Date("2024-08-26T20:51:00Z"); // August 27th, 2:00 AM PKT in UTC
   const currentTime = new Date();
   const elapsedTime = currentTime - startTime;
   const remainingTime = Math.max(countdownDuration - elapsedTime, 0);
