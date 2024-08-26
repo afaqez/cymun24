@@ -9,12 +9,12 @@ const stats = [
   {
     icon: CommitteeSessionIcon,
     title: "Committee Sessions",
-    count: "10",
+    count: "7",
   },
   {
     icon: UNcommittees,
     title: "UN Committees",
-    count: "8",
+    count: "6",
   },
   {
     icon: Delegates,
