@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Box, Typography, Grid } from "@mui/material";
 
-// Utility function for time calculation
 const timeCalculation = () => {
-  const countdownDuration = 10 * 60 * 1000; // 5 minutes in milliseconds
-  const startTime = new Date("2024-08-26T20:51:00Z"); // August 27th, 2:00 AM PKT in UTC
+  const countdownDuration = 10 * 60 * 1000; // 10 minutes in milliseconds
+  const startTime = new Date("2024-08-26T22:19:00Z"); // Start time
   const currentTime = new Date();
   const elapsedTime = currentTime - startTime;
   const remainingTime = Math.max(countdownDuration - elapsedTime, 0);
 
-  if (remainingTime <= 0) return false; // Return false when countdown ends
+  if (remainingTime <= 0) return false;
 
   const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
   const hours = Math.floor(
@@ -21,16 +20,17 @@ const timeCalculation = () => {
   return [days, hours, minutes, seconds];
 };
 
-const Timer = () => {
+const Timer = ({ onTimerEnd }) => {
   const [countdown, setCountdown] = useState(() => timeCalculation() || []);
-  const [timerEnded, setTimerEnded] = useState(false); // State to track if timer has ended
+  const [timerEnded, setTimerEnded] = useState(false);
 
   useEffect(() => {
     const updateCountdown = setInterval(() => {
       const newCountdown = timeCalculation();
       if (newCountdown === false) {
-        setTimerEnded(true); // Set timerEnded to true when countdown reaches zero
-        clearInterval(updateCountdown); // Stop the interval
+        setTimerEnded(true);
+        clearInterval(updateCountdown);
+        onTimerEnd(true); // Notify the parent component that the timer has ended
       } else {
         setCountdown(newCountdown);
       }
@@ -39,7 +39,7 @@ const Timer = () => {
     return () => {
       clearInterval(updateCountdown);
     };
-  }, []);
+  }, [onTimerEnd]);
 
   const timerLabels = ["Days", "Hours", "Minutes", "Seconds"];
 
@@ -71,7 +71,7 @@ const Timer = () => {
             animation: "fade-in 1s ease-in",
           }}
         >
-          That is all folks!
+          Registrations Open!
         </Typography>
       ) : (
         <Grid
@@ -87,8 +87,8 @@ const Timer = () => {
             <Grid
               item
               key={index}
-              xs={6} // 2 items per row on mobile
-              md={3} // 4 items per row on larger screens
+              xs={6}
+              md={3}
               sx={{
                 display: "flex",
                 flexDirection: "column",
@@ -108,7 +108,6 @@ const Timer = () => {
                   boxShadow: 3,
                   backgroundColor: "rgba(255, 255, 255, 0.2)",
                   backdropFilter: "blur(10px)",
-                  backdropBrightness: "0.9",
                   textAlign: "center",
                   animation: "slide-up 1s ease-in",
                 }}

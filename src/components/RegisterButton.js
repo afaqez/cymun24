@@ -12,6 +12,10 @@ const RegisterButton = () => {
     >
       <Button
         variant="contained"
+        component="a"
+        href="https://forms.gle/qCPBV3ouTxsu1zZ79"
+        target="_blank" // Open the link in a new tab
+        rel="noopener noreferrer" // Security best practice when using target="_blank"
         sx={{
           backgroundColor: "#fe0a0a",
           color: "white",

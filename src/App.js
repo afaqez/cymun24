@@ -1,5 +1,5 @@
-import React from "react";
-import { Box, Container } from "@mui/material";
+import React, { useState } from "react";
+import { Box, Container, ThemeProvider } from "@mui/material";
 import background from "./assets/images/background.png";
 import Navbar from "./components/Navbar";
 import Timer from "./components/Timer";
@@ -9,33 +9,42 @@ import Stats from "./components/Stats";
 import PresidentsMessage from "./components/PresidentMessage";
 import Footer from "./components/Footer";
 import Committees from "./components/Committees";
+import theme from "./constants/theme";
 
 function App() {
+  const [timerEnded, setTimerEnded] = useState(false);
+
+  const handleTimerEnd = () => {
+    setTimerEnded(true);
+  };
+
   return (
+    <ThemeProvider theme={theme}>
     <Box
       sx={{
         position: "relative",
         minHeight: "100vh",
         width: "100vw",
-        overflow: "hidden", // Prevents scrollbars from appearing if background image is larger
+        overflow: "hidden",
         backgroundImage: `url(${background})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed", // Ensures the background image is fixed
-        backgroundRepeat: "no-repeat", // Prevents background from repeating
+        backgroundAttachment: "fixed",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <Container maxWidth="lg" disableGutters>
         <Navbar />
         <HeroSection />
-        <Timer />
-        <RegisterButton />
+        <Timer onTimerEnd={handleTimerEnd} />
+        {timerEnded && <RegisterButton />}
         <Stats />
         <PresidentsMessage />
         <Committees />
         <Footer />
       </Container>
     </Box>
+    </ThemeProvider>
   );
 }
 
