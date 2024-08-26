@@ -8,6 +8,7 @@ import RegisterButton from "./components/RegisterButton";
 import Stats from "./components/Stats";
 import PresidentsMessage from "./components/PresidentMessage";
 import Footer from "./components/Footer";
+import Committees from "./components/Committees";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <RegisterButton />
         <Stats />
         <PresidentsMessage />
+        <Committees />
         <Footer />
       </Container>
     </Box>
