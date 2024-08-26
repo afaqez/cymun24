@@ -2,6 +2,10 @@ import React from "react";
 import { Box, Typography, Paper } from "@mui/material";
 import WHOIcon from "../assets/icons/who.svg";
 import UNSCIcon from "../assets/icons/unsc.svg";
+import UNWIcon from "../assets/icons/unw.svg";
+import UNHRCIcon from "../assets/icons/unhrc.svg";
+import PNAIcon from "../assets/icons/pna.svg";
+import ICCIcon from "../assets/icons/icc.svg";
 
 const committees = [
   {
@@ -13,22 +17,21 @@ const committees = [
     name: "United Nations Security Council (UNSC)",
   },
   {
-    icon: WHOIcon,
-    name: "World Health Organization (WHO)",
+    icon: UNWIcon,
+    name: "United Nations Women (UNW)",
   },
   {
-    icon: UNSCIcon,
-    name: "United Nations Security Council (UNSC)",
+    icon: UNHRCIcon,
+    name: "United Nations Human Rights Council (UNHRC)",
   },
   {
-    icon: WHOIcon,
-    name: "World Health Organization (WHO)",
+    icon: PNAIcon,
+    name: "Pakistan National Assembly (PNA)",
   },
   {
-    icon: UNSCIcon,
-    name: "United Nations Security Council (UNSC)",
+    icon: ICCIcon,
+    name: "International Crises Cell (ICC)",
   },
-  // Add more committees as needed...
 ];
 
 const Committees = () => {
@@ -36,11 +39,25 @@ const Committees = () => {
     <Box
       sx={{
         display: "flex",
-        justifyContent: "center",
+        flexDirection: "column",
+        alignItems: "center",
         padding: 4,
         mt: 20,
       }}
     >
+      {/* Header */}
+      <Typography
+        variant="h4"
+        sx={{
+          color: "#ffffff",
+          mb: 4, // Margin bottom for spacing between the title and the grid
+          fontWeight: "bold",
+        }}
+      >
+        COMMITTEES
+      </Typography>
+
+      {/* Committees Grid */}
       <Box
         sx={{
           display: "grid",
