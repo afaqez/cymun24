@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Box, Typography, Grid } from "@mui/material";
 
 const timeCalculation = () => {
-  const countdownDuration = 10 * 60 * 1000; // 10 minutes in milliseconds
-  const startTime = new Date("2024-08-26T22:19:00Z"); // Start time
+  const countdownDuration = 33604 * 60 * 1000; // 10 minutes in milliseconds
+  const startTime = new Date("2024-08-28T15:56:00Z"); // Start time in UTC
+
   const currentTime = new Date();
   const elapsedTime = currentTime - startTime;
   const remainingTime = Math.max(countdownDuration - elapsedTime, 0);

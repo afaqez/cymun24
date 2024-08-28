@@ -10,6 +10,7 @@ import PresidentsMessage from "./components/PresidentMessage";
 import Footer from "./components/Footer";
 import Committees from "./components/Committees";
 import theme from "./constants/theme";
+import VideoComponent from "./components/VideoComponent";
 
 function App() {
   const [timerEnded, setTimerEnded] = useState(false);
@@ -37,10 +38,11 @@ function App() {
         <Navbar />
         <HeroSection />
         <Timer onTimerEnd={handleTimerEnd} />
+        <VideoComponent/>
         {timerEnded && <RegisterButton />}
-        <Stats />
-        <PresidentsMessage />
-        <Committees />
+        {timerEnded && <Stats />}
+        {timerEnded && <PresidentsMessage />}
+        {timerEnded && <Committees />}
         <Footer />
       </Container>
     </Box>
