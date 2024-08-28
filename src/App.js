@@ -40,9 +40,9 @@ function App() {
         <Timer onTimerEnd={handleTimerEnd} />
         <VideoComponent/>
         {timerEnded && <RegisterButton />}
-        {timerEnded && <Stats />}
-        {timerEnded && <PresidentsMessage />}
-        {timerEnded && <Committees />}
+        <Stats />
+        <PresidentsMessage />
+        <Committees />
         <Footer />
       </Container>
     </Box>
