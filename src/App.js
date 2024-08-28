@@ -41,8 +41,8 @@ function App() {
         {!timerEnded && <VideoComponent />}
         {timerEnded && <RegisterButton />}
         <Stats />
-        <PresidentsMessage />
         <Committees />
+        <PresidentsMessage />
         <Footer />
       </Container>
     </Box>
