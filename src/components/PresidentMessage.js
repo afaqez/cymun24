@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, Paper, Avatar } from "@mui/material";
-import presidentImage from "../assets/icons/president.svg";
+import presidentImage from "../assets/images/moiz2.jpg";
 
 const PresidentsMessage = () => {
   return (
@@ -32,12 +32,13 @@ const PresidentsMessage = () => {
           src={presidentImage}
           alt="President"
           sx={{
-            height: { xs: 160, sm: 120 }, // Larger on small screens (xs), standard on larger screens (sm and up)
-            width: { xs: 160, sm: 120 }, // Same size as height for circular shape
+            height: { xs: 160, sm: 120 },
+            width: { xs: 160, sm: 120 },
             mb: 2,
             borderRadius: "50%",
             mx: "auto",
-            objectFit: "cover",
+            objectFit: "cover", // Ensures the image covers the Avatar without distortion
+            objectPosition: "center top", // Centers on the top part of the image
           }}
         />
         <Typography
