@@ -38,7 +38,7 @@ function App() {
         <Navbar />
         <HeroSection />
         <Timer onTimerEnd={handleTimerEnd} />
-        <VideoComponent/>
+        {!timerEnded && <VideoComponent />}
         {timerEnded && <RegisterButton />}
         <Stats />
         <PresidentsMessage />
