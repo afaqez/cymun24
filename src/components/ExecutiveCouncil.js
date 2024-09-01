@@ -9,23 +9,28 @@ import SecretaryGeneral from "../assets/images/SecretaryGeneral.jpg";
 const councilMembers = [
   {
     image: SecretaryGeneral,
-    name: "Secretary General",
+    role: "Secretary General",
+    name: "Abdullah Shah Naqvi",
   },
   {
     image: DirectorGeneral,
-    name: "Director General",
+    role: "Director General",
+    name: "Aakif Rafique",
   },
   {
     image: PresidentialAdvisor,
-    name: "Presidential Advisor",
+    role: "Presidential Advisor",
+    name: "Esha Khan Kurai",
   },
   {
     image: UnderDirectorGeneral,
-    name: "Under Director General",
+    role: "Under Director General",
+    name: "Muhammad Ahsan Awan",
   },
   {
     image: D2DOM,
-    name: "D2DOM",
+    role: "D2DOM",
+    name: "Abdul Rehman Shakoor",
   },
 ];
 
@@ -106,6 +111,9 @@ const ExecutiveCouncil = () => {
               />
               <Typography variant="body2" sx={{ color: "#ffffff" }}>
                 {member.name}
+              </Typography>
+               <Typography variant="h6" sx={{ color: "#ffffff" }}>
+                {member.role}
               </Typography>
             </Paper>
           </ButtonBase>
