@@ -19,7 +19,7 @@ const VideoComponent = () => {
         autoPlay
         muted
         loop
-        controls=""
+        playsInline // Ensure the video plays inline on iOS
         style={{ borderRadius: "8px" }} // Optional styling
       >
         <source src={videoSrc} type="video/mp4" />
