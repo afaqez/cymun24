@@ -8,24 +8,24 @@ import SecretaryGeneral from "../assets/images/SecretaryGeneral.jpg";
 
 const councilMembers = [
   {
-    image: DirectorGeneral,
-    name: "Director General",
+    image: SecretaryGeneral,
+    name: "Secretary General",
   },
   {
-    image: UnderDirectorGeneral,
-    name: "Under Director General",
+    image: DirectorGeneral,
+    name: "Director General",
   },
   {
     image: PresidentialAdvisor,
     name: "Presidential Advisor",
   },
   {
-    image: D2DOM,
-    name: "D2DOM",
+    image: UnderDirectorGeneral,
+    name: "Under Director General",
   },
   {
-    image: SecretaryGeneral,
-    name: "Secretary General",
+    image: D2DOM,
+    name: "D2DOM",
   },
 ];
 
@@ -62,11 +62,12 @@ const ExecutiveCouncil = () => {
         EXECUTIVE COUNCIL
       </Typography>
 
-      {/* Council Members Grid */}
+      {/* Council Members Flexbox */}
       <Box
         sx={{
-          display: "grid",
-          gridTemplateColumns: { xs: "repeat(2, 1fr)", md: "repeat(3, 1fr)" }, // 2 columns on mobile, 3 on larger screens
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
           gap: 2,
           maxWidth: 1200,
         }}
@@ -76,7 +77,8 @@ const ExecutiveCouncil = () => {
             key={index}
             onClick={() => handleOpenModal(member)}
             sx={{
-              width: "100%",
+              width: { xs: "calc(50% - 8px)", md: "calc(33.33% - 16px)" },
+              mb: 2,
             }}
           >
             <Paper
@@ -111,7 +113,6 @@ const ExecutiveCouncil = () => {
       </Box>
 
       {/* Optional: Council Member Modal */}
-     
     </Box>
   );
 };

@@ -1,7 +1,7 @@
 // src/components/VideoComponent.js
-import React from 'react';
-import { Box } from '@mui/material';
-import videoSrc from '../assets/videos/video.mp4'; // Adjust path as needed
+import React from "react";
+import { Box } from "@mui/material";
+import videoSrc from "../assets/videos/video.mp4"; // Adjust path as needed
 
 const VideoComponent = () => {
   return (
@@ -19,6 +19,7 @@ const VideoComponent = () => {
         autoPlay
         muted
         loop
+        controls=""
         style={{ borderRadius: "8px" }} // Optional styling
       >
         <source src={videoSrc} type="video/mp4" />
