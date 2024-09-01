@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import Committees from "./components/Committees";
 import theme from "./constants/theme";
 import VideoComponent from "./components/VideoComponent";
+import ExecutiveCouncil from "./components/ExecutiveCouncil";
 
 function App() {
   const [timerEnded, setTimerEnded] = useState(false);
@@ -43,6 +44,7 @@ function App() {
         <Stats />
         <Committees />
         <PresidentsMessage />
+        <ExecutiveCouncil/>
         <Footer />
       </Container>
     </Box>
