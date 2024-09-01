@@ -15,7 +15,6 @@ const VideoComponent = () => {
     >
       <video
         width="80%" // Adjust width as needed
-        controls
         autoPlay
         muted
         loop
