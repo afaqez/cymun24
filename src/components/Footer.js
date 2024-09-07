@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography, Link } from "@mui/material";
+import { ReactComponent as InstaLogo } from "../assets/icons/instaLogo.svg";
 
 const Footer = () => {
   return (
@@ -7,16 +8,32 @@ const Footer = () => {
       sx={{
         color: "white",
         textAlign: "center",
-        py: 2,
+        py: 4,
         bottom: 0,
         width: "100%",
-        overflowX: "hidden",
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         mt: 5,
       }}
     >
+      {/* Instagram Logo in the Center */}
+      <Link
+        href="https://www.instagram.com/cymun24"
+        target="_blank"
+        rel="noopener noreferrer"
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          mb: 2, // Adds space between logo and text
+        }}
+      >
+        <InstaLogo style={{ width: "50px", height: "50px", fill: "white" }} />
+      </Link>
+
+      {/* Footer Text */}
       <Typography variant="body2">
         &copy; {new Date().getFullYear()} CYMUN. All rights reserved. Powered by{" "}
         <Link
@@ -26,10 +43,10 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
           sx={{
-            fontWeight: "bold", // Make the link text bold
-            transition: "color 0.3s", // Smooth color transition
+            fontWeight: "bold",
+            transition: "color 0.3s",
             "&:hover": {
-              color: "primary.main", // Change color on hover
+              color: "primary.main",
             },
           }}
         >

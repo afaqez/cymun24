@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Box, Typography, Grid } from "@mui/material";
 
 const timeCalculation = () => {
-  const countdownDuration = 33604 * 60 * 1000; // 10 minutes in milliseconds
+  const countdownDuration = 33604 * 60 * 1000;
   const startTime = new Date("2024-08-28T15:56:00Z"); // Start time in UTC
+
+  // const countdownDuration = 1 * 60 * 1000; // 1 minute in milliseconds
+  // const startTime = new Date("2024-09-07T10:11:00Z"); // Start time in UTC (3:11 PM PKT)
 
   const currentTime = new Date();
   const elapsedTime = currentTime - startTime;

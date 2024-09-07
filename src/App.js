@@ -22,32 +22,33 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-    <Box
-      sx={{
-        position: "relative",
-        minHeight: "100vh",
-        width: "100vw",
-        overflow: "hidden",
-        backgroundImage: `url(${background})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      <Container maxWidth="lg" disableGutters>
-        <Navbar />
-        <HeroSection />
-        <Timer onTimerEnd={handleTimerEnd} />
-        {!timerEnded && <VideoComponent />}
-        {timerEnded && <RegisterButton />}
-        <Stats />
-        <Committees />
-        <PresidentsMessage />
-        <ExecutiveCouncil/>
-        <Footer />
-      </Container>
-    </Box>
+      <Box
+        sx={{
+          position: "relative",
+          minHeight: "100vh",
+          width: "100vw",
+          overflow: "hidden",
+          backgroundImage: `url(${background})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <Container maxWidth="lg" disableGutters>
+          <Navbar />
+          <HeroSection />
+          <Timer onTimerEnd={handleTimerEnd} />
+          {!timerEnded && <VideoComponent />}
+          {timerEnded && <RegisterButton />}
+          <Stats />
+          <Committees />
+          <PresidentsMessage />
+          <ExecutiveCouncil />
+
+          <Footer />
+        </Container>
+      </Box>
     </ThemeProvider>
   );
 }
