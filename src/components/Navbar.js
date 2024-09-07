@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
+import { ReactComponent as Logo } from "../assets/icons/logo.svg"; // Import your SVG logo
 
 const Navbar = () => {
   return (
@@ -7,21 +8,25 @@ const Navbar = () => {
       component="nav"
       sx={{
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "space-between", // Adjust the logo and text
         alignItems: "center",
         width: "92%",
         marginX: "auto",
         py: 4,
       }}
     >
+      {/* Text Box */}
       <Box
         sx={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           width: "100%",
+          flexDirection: "row",
+          gap: 1,
         }}
       >
+        <Logo style={{ width: "100px", height: "auto" }} />{" "}
         <Box
           sx={{
             mb: 4,
@@ -33,6 +38,7 @@ const Navbar = () => {
           <Typography
             variant="h2"
             sx={{
+              mt: 4,
               fontFamily: "Spartan, sans-serif",
               fontSize: {
                 xs: "2.5rem", // text-5xl
