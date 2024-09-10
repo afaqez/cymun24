@@ -1,7 +1,6 @@
 // src/components/VideoComponent.js
 import React from "react";
 import { Box } from "@mui/material";
-import videoSrc from "../assets/videos/video.mp4"; // Adjust path as needed
 
 const VideoComponent = () => {
   return (
@@ -13,17 +12,17 @@ const VideoComponent = () => {
         my: 4, // Add margin as needed
       }}
     >
-      <video
-        width="80%" // Adjust width as needed
-        autoPlay
-        muted
-        loop
-        playsInline // Ensure the video plays inline on iOS
+      <iframe
+        src="https://giphy.com/embed/obBRY85qHrHIOX7TsF"
+        // src="https://giphy.com/embed/lTLV2erK8vf1MIz4Rk"
+        width="500"
+        height="500"
+        playsInline
         style={{ borderRadius: "8px" }} // Optional styling
-      >
-        <source src={videoSrc} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+        frameBorder="0"
+        allowFullScreen
+        title="Giphy"
+      ></iframe>
     </Box>
   );
 };

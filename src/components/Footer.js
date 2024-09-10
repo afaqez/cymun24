@@ -6,16 +6,19 @@ const Footer = () => {
   return (
     <Box
       sx={{
+        position: "fixed", // Fix the footer at the bottom of the viewport
+        left: 0,
+        bottom: 0,
+        width: "100%", // Full width of the page
         color: "white",
         textAlign: "center",
         py: 4,
-        bottom: 0,
-        width: "100%",
+
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        mt: 5,
+        zIndex: 1000, // Ensure it's above other content
       }}
     >
       {/* Instagram Logo in the Center */}
