@@ -39,12 +39,12 @@ function App() {
           <Navbar />
           <HeroSection />
           <Timer onTimerEnd={handleTimerEnd} />
-          <VideoComponent />
-          {/*     
+          {/* <VideoComponent /> */}
+
           <Stats />
           <Committees />
           <PresidentsMessage />
-          <ExecutiveCouncil /> */}
+          <ExecutiveCouncil />
 
           <Footer />
         </Container>
